@@ -1,0 +1,198 @@
++*In[1]:*+
+[source, ipython3]
+----
+import pandas as pd
+import matplotlib.pylab as plt
+import seaborn as sns
+import os
+%matplotlib inline
+----
+
+
++*In[2]:*+
+[source, ipython3]
+----
+folderpath="/Users/jameswagle/.........."
+----
+
+
++*In[3]:*+
+[source, ipython3]
+----
+filelist=[]
+
+k=0
+for i in os.listdir(folderpath):
+    df1=pd.read_csv(folderpath+'/'+i,sep='\t',names=["s.n","voltage","current","resistance"])
+    filelist.append(df1)
+    
+    k=k+1
+#for j in range(1,len(filelist)):
+ #   df=pd.concat(filelist[j]["current"],filelist[j]["voltage"])
+    
+#df.head()     
+
+#x1=
+for i in range(0,len(filelist)):
+    
+    
+    plt.semilogy(filelist[i]["voltage"],abs(filelist[i]["current"]))
+    #plt.title()
+#plt.semilogy(filelist[2]["voltage"],abs(filelist[2]["current"]))
+----
+
+
++*Out[3]:*+
+----
+![png](output_2_0.png)
+----
+
+
++*In[4]:*+
+[source, ipython3]
+----
+#len(filelist)
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[5]:*+
+[source, ipython3]
+----
+#df1=pd.read_csv("/Users/jameswagle/Desktop/GaN Projects/data/50 cycles of GaN on different substrate/3-16-2021/s1/s1_IV_2_dark",sep='\t',names=["s.n","voltage_s1_5V","current_s1_5V","resistance_s1_5V"])
+----
+
+
++*In[6]:*+
+[source, ipython3]
+----
+#df2=pd.read_csv("/Users/jameswagle/Desktop/GaN Projects/data/50 cycles of GaN on different substrate/3-16-2021/s1/s1_IV_3_dark",sep='\t',names=["s.n","voltage_s1_2V","current_s1_2V","resistance_s1_2V"])
+----
+
+
++*In[7]:*+
+[source, ipython3]
+----
+#df3=pd.read_csv("/Users/jameswagle/Desktop/GaN Projects/data/50 cycles of GaN on different substrate/3-16-2021/s1/s1_IV_dark",sep='\t',names=["s.n","voltage_s1_3V","current_s1_3V","resistance_s1_3V"])
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[8]:*+
+[source, ipython3]
+----
+#df.head()
+----
+
+
++*In[9]:*+
+[source, ipython3]
+----
+#x1=df["voltage"]
+----
+
+
++*In[10]:*+
+[source, ipython3]
+----
+#y1=df["current"]
+----
+
+
++*In[11]:*+
+[source, ipython3]
+----
+#y2=[]  
+#for i in y1:
+ #   if i>=0:
+  #      y2.append(i)
+   # if i<0:
+    #    i=-i
+     #   y2.append(i)
+----
+
+
++*In[12]:*+
+[source, ipython3]
+----
+#plt.semilogy(x1,abs(y1))
+#plt.xlabel("voltage")
+#plt.ylabel("current")
+
+----
+
+
++*In[13]:*+
+[source, ipython3]
+----
+#df1=pd.read_csv("/Users/jameswagle/Desktop/GaN Projects/data/50 cycles of GaN on different substrate/3-16-2021/s2/s2_IV_3_dark",sep='\t',names=["s.n","voltage","current","resistance"])
+----
+
+
++*In[14]:*+
+[source, ipython3]
+----
+#df1.head()
+----
+
+
++*In[15]:*+
+[source, ipython3]
+----
+#ys2=abs(df1["current"])
+----
+
+
++*In[16]:*+
+[source, ipython3]
+----
+#plt.semilogy(df1["voltage"],ys2)
+
+----
+
+
++*In[17]:*+
+[source, ipython3]
+----
+#sns.lineplot(data=df1, x="voltage", y="current")
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
